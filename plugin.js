@@ -30,12 +30,3 @@ function getWorkspaceInfo() {
         workspaceInfo = data
     })
 }
-
-function getWorkspaceInfo() {
-    // Obter informações do workspace
-    Kinbox.getWorkspaceInfo(async function (payload) {
-        console.log("the payload2", payload)
-        workspaceInfo = payload
-    })
-}
-
