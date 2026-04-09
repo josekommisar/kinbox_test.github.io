@@ -15,13 +15,8 @@ Kinbox.on("conversation", function (data) {
     getWorkspaceInfo()
 })
 
-Kinbox.on("no_conversation", function (data) {
-    conversation = null
-    console.log("on no-conversation", data)
-})
-
 Kinbox.getWorkspaceInfo(function (payload) {
-    console.log(payload)
+    console.log("the payload", payload)
 })
 
 /********************
@@ -33,6 +28,14 @@ function getWorkspaceInfo() {
     Kinbox.getWorkspaceInfo(async function (data) {
         console.log("on workspaceInfo", data)
         workspaceInfo = data
+    })
+}
+
+function getWorkspaceInfo() {
+    // Obter informações do workspace
+    Kinbox.getWorkspaceInfo(async function (payload) {
+        console.log("the payload", payload)
+        workspaceInfo = payload
     })
 }
 
