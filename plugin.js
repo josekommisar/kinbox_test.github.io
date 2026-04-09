@@ -3,7 +3,6 @@
  ********************/
 var conversation
 var workspaceInfo
-var payload
 
 /********************
  * Eventos
@@ -17,7 +16,6 @@ Kinbox.on("conversation", function (data) {
 })
 
 Kinbox.getWorkspaceInfo(function (payload) {
-    payload = payload
     console.log("the payload1", payload)
 })
 
